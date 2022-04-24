@@ -11,3 +11,11 @@ jobs:
         if: ${{ startsWith(github.event.comment.body, '/unstale') }}
         with:
           labels: no-tool-request-activity
+  add_label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-ecosystem/action-add-labels@v1
+        if: ${{ startsWith(github.event.comment.body, '/IVolunteerAsTribute') }}
+        with:
+          labels: In-Progress
