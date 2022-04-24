@@ -21,7 +21,7 @@ jobs:
     - uses: actions/stale@v5
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        stale-issue-message: 'Tool request has not been active in over 60 days.'
-        stale-pr-message: 'Proposed tool solution to issue has not been active in over 60 days.'
+        stale-issue-message: 'Tool request has not been active in over 60 days. Comment `/unstale` to remove Stale designation.'
+        stale-pr-message: 'Proposed tool solution to issue has not been active in over 60 days. Comment `/unstale` to remove Stale designation.'
         stale-issue-label: 'no-tool-request-activity'
         stale-pr-label: 'no-tool-proposal-activity'
