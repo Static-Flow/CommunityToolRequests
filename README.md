@@ -15,5 +15,5 @@ Tool requests are submitted as issues to this repository, where they are discuss
 ## Taking ownership of building a tool request
 
 1. Browse open issues to see if there is a tool request you think you could solve.
-2. Comment on the issue with `/IVolunteerAsTribute` to alter the issue creator that you are attempting to build a tool to satisfy the issue.
+2. Comment on the issue with `/IVolunteerAsTribute` to alert the issue creator that you are attempting to build a tool to satisfy the issue.
 3. Once your tool is complete, submit a pull request to this repository against the issue using the pull request template.
