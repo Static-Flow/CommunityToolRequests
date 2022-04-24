@@ -25,3 +25,11 @@ jobs:
         stale-pr-message: 'Proposed tool solution to issue has not been active in over 60 days. Comment `/unstale` to remove Stale designation.'
         stale-issue-label: 'no-tool-request-activity'
         stale-pr-label: 'no-tool-proposal-activity'
+  remove_label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-ecosystem/action-remove-labels@v1
+        if: ${{contains( github.event.pull_request.labels.*.name, 'In-Progress')}}
+        with:
+          labels: In-Progress
