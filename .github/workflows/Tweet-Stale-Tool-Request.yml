@@ -1,0 +1,17 @@
+
+name: Tweet-Stale-Tool-Request
+on:
+  issues:
+      types: [labeled]
+jobs:
+  tweet:
+    if: github.event.label.name == '<no-tool-request-activity>'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ethomson/send-tweet-action@v1
+        with:
+          status: "Tool request - ${{ github.event.issue.title }} -> ${{ github.event.issue.html_url }} is still looking for a developer!"
+          consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
+          consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
+          access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
