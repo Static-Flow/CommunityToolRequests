@@ -5,7 +5,7 @@ on:
       types: [labeled]
 jobs:
   tweet:
-    if: github.event.label.name == '<no-tool-request-activity>'
+    if: github.event.label.name == 'no-tool-request-activity'
     runs-on: ubuntu-latest
     steps:
       - uses: ethomson/send-tweet-action@v1
