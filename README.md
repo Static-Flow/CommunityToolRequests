@@ -1,7 +1,11 @@
 # CommunityToolRequests
 This repository attempts to provide a common place for those in the security space to request tooling and find ideas for tools to build. 
 
-Tool requests are submitted as issues to this repository, where they are discussed, and possibly accepted by a tool developer to work on. Once the tool is complete, the developer submits a PR containing the 
+Tool requests are submitted as issues to this repository, where they are discussed, and possibly accepted by a tool developer to work on. Once the tool is complete, the developer submits a PR containing a link to the built tool and any needed info on how to use it. Once the requester and developer are happy, the PR is approved and a link to the finished tool is saved to this repository for easy viewing.
+
+<br>
+
+Don't forget to follow the Bot for this project: https://twitter.com/ToolRequest to see when new requests come in that you might want to work on or need yourself!
 
 
 # How it works
@@ -17,3 +21,10 @@ Tool requests are submitted as issues to this repository, where they are discuss
 1. Browse open issues to see if there is a tool request you think you could solve.
 2. Comment on the issue with `/IVolunteerAsTribute` to alert the issue creator that you are attempting to build a tool to satisfy the issue.
 3. Once your tool is complete, submit a pull request to this repository against the issue using the pull request template.
+
+## Submitting a tool you've already built
+
+Think you have a tool others might want to use themselves? Feel free to combine the two pieces above and make a pull request against your own issue to share the tool with others!
+
+1. Create an issue using the template describing what problem your tool solves
+2. Create a PR referencing the issue in step 1 containing the link to your tool and close the PR.
