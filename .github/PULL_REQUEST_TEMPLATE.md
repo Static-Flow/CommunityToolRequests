@@ -1,4 +1,4 @@
-## NOTE: Ensure your PR only updates the Readme of this repository by adding the link to your tool under the `Fullfilled Tool Request` Section
+## NOTE: Ensure your PR only updates the Readme of this repository by adding the link to your tool under the `Fullfilled Tool Requests` Section
 
 
 # Tool Request Id
