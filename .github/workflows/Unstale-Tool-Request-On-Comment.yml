@@ -1,0 +1,13 @@
+name: Remove Stale Label From Tool Request or PR
+
+on: [issue_comment]
+
+jobs:
+  remove_label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-ecosystem/action-remove-labels@v1
+        if: ${{ startsWith(github.event.comment.body, '/unstale') }}
+        with:
+          labels: no-tool-request-activity
