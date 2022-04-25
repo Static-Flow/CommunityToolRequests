@@ -1,6 +1,9 @@
 name: Remove Stale Label From Tool Request or PR
 
-on: [issue_comment]
+on: 
+  issue_comment:
+      types:
+      - created
 
 jobs:
   remove_label:
@@ -16,6 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions-ecosystem/action-add-labels@v1
-        if: ${{ startsWith(github.event.comment.body, '/IVolunteerAsTribute') }}
+        if: ${{ !github.event.issue.pull_request && startsWith(github.event.comment.body, '/IVolunteerAsTribute') }}
         with:
           labels: In-Progress
