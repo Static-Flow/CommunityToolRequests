@@ -4,12 +4,11 @@ on:
     types:
       - created
 jobs:
-  add-comment:
-    if: ${{ github.event.issue.pull_request && startsWith(github.event.comment.body, '/approved') }}
+  add_label:
     runs-on: ubuntu-latest
     steps:
-    - name: Create comment
-      uses: peter-evans/create-or-update-comment@v2
-      with:
-        issue-number: ${{github.event.pull_request.number}}
-        body: "@Static-Flow"
+      - uses: actions/checkout@v2
+      - uses: actions-ecosystem/action-add-labels@v1
+        if: ${{ github.event.issue.pull_request && startsWith(github.event.comment.body, '/approved') }}
+        with:
+          labels: Approved
