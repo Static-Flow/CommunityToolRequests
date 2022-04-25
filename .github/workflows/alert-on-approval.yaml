@@ -1,11 +1,11 @@
 name: Alert-on-approval
 on:
-  pull_request:
+  issue_comment:
     types:
-      - labeled
+      - created
 jobs:
   add-comment:
-    if: github.event.label.name == 'approved'
+    if: ${{ github.event.issue.pull_request && startsWith(github.event.comment.body, '/approved') }}
     runs-on: ubuntu-latest
     steps:
     - name: Create comment
