@@ -30,3 +30,4 @@ Request: [3](https://github.com/Static-Flow/CommunityToolRequests/issues) - [Sup
 
 # Fullfilled Tool Requests
 
+Request: [3](https://github.com/Static-Flow/CommunityToolRequests/issues) - [SuperRadTool](https://github.com/Static-Flow/CommunityToolRequests)
